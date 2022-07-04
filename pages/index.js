@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
-export default function Home({ name }) {
+export default function Home(/*{ name }*/) {
   return (
     <div className={styles.container}>
       <Head>
@@ -15,22 +15,20 @@ export default function Home({ name }) {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
-        <h1>{name.name}</h1>
+        
 
-        <div className={styles.grid}>
-
-
-        </div>
       </main>
     </div>
   )
 }
 
-export async function getStaticProps({ params }){
+/*export async function getStaticProps({ params }){
   const req = await fetch(`http://localhost:3000/name.json`);
   const data = await req.json();
+
+  <h1>{name.name}</h1>
 
   return {
     props: {name : data}
   }
-}
+}*/
